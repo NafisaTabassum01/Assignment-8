@@ -12,8 +12,8 @@ const Footer = () => {
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div>
                     <p className='text-[#dda15e] pt-3'>Contact Us</p>
-                    <p className='text-[#fefae0c9]'><i class="fa-solid fa-phone"></i> +880 1723456890</p>
-                    <p className='text-[#fefae0c9]'><i class="fa-regular fa-envelope-open"></i> qurbanihat@gmail.com</p>
+                    <p className='text-[#fefae0c9]'><i className="fa-solid fa-phone"></i> +880 1723456890</p>
+                    <p className='text-[#fefae0c9]'><i className="fa-regular fa-envelope-open"></i> qurbanihat@gmail.com</p>
                 </div>
                 <div className='text-[#fefae0c9] pt-6'>
                     <p className='text-[#dda15e] pt-3'>Social Links</p>
