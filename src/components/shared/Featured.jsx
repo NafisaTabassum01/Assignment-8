@@ -47,12 +47,12 @@ const Featured = async () => {
         <div className='grid grid-cols-1 gap-6 mt-6 md:grid-cols-4'>
           {featuredAnimals.map((animals) => {
             return (
-              <div key={animals.id} className='bg-[#fbf7d9d8] p-3 shadow-lg rounded-xl'>
+              <div key={animals.id} className='bg-[#fbf7d9d8] p-3 shadow-lg rounded-xl mb-8'>
                 <Image src={imageMap[animals.image]} alt='cow' className='rounded-xl pb-4'/>
                 <p className='text-[20px] pl-2 pb-2.5 font-bold text-[#884E1B]'>{animals.name}</p>
                 <p className='text-[16px] pl-2 pb-2.5 font-medium text-[#3c5126e6]'>{animals.breed}</p>
-                <p className='text-[18px] pl-2 pb-2.5 font-bold text-green-900'><i class="fa-solid fa-bangladeshi-taka-sign"></i>{animals.price}</p>
-                <p className='text-[18px] pl-2 pb-2.5 font-medium text-[#7c512ac9]'><i class="fa-solid fa-location-dot"></i>{animals.location}</p>
+                <p className='text-[18px] pl-2 pb-2.5 font-bold text-green-900'><i className="fa-solid fa-bangladeshi-taka-sign"></i>{animals.price}</p>
+                <p className='text-[18px] pl-2 pb-2.5 font-medium text-[#7c512ac9]'><i className="fa-solid fa-location-dot"></i>{animals.location}</p>
               </div>
             );
           })}
