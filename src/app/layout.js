@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono, Noto_Serif } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/shared/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,10 +10,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 const notoSerif = Noto_Serif({
-  variable: "--font-geist-mono",
+  variable: "--font-noto-serif",
   subsets: ["latin"],
-  weight:["300", "400"]
+  weight: ["300", "400"],
 });
 
 export const metadata = {
@@ -29,11 +29,16 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className={`${notoSerif.className} min-h-full flex flex-col `}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+      </head>
 
+      <body className={`${notoSerif.className} min-h-full flex flex-col`}>
         {children}
-        
-        </body>
+      </body>
     </html>
   );
 }
