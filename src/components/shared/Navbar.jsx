@@ -22,7 +22,7 @@ const Navbar = () => {
       </ul>
     </div>
 
-    <Link href={'/'} className="text-xl text-[#2A381A] font-extrabold">QurbaniHat </Link>
+    <Link href={'/'} className="text-xl text-[#bc6c25] font-extrabold">QurbaniHat </Link>
 
   </div>
   <div className="navbar-center hidden lg:flex">
