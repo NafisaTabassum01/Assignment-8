@@ -18,7 +18,7 @@ const imageMap = {
 };
 
 const getAnimals = async () => {
-  const res = await fetch('https://pastebin.com/raw/ty6kkSSh');
+  const res = await fetch('https://gist.githubusercontent.com/NafisaTabassum01/acb3443acdc397a3d08a4522476b8afa/raw/a217edd62b2901c4139a1d4a0804219a1332b38a/gistfile1.txt');
   const data = await res.json();
   return data;
 };
@@ -43,7 +43,6 @@ const Featured = async () => {
           </Link>
         </div>
 
-        {/* grid section */}
         <div className='grid grid-cols-1 gap-6 mt-6 md:grid-cols-4'>
           {featuredAnimals.map((animals) => {
             return (

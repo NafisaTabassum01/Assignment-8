@@ -6,8 +6,9 @@ import user from "../../assets/user.png";
 
 const Navbar = () => {
     return (
-        <div>
-<div className="navbar shadow-sm px-4 bg-[#fefae051]">
+        <div className='shadow-sm px-4 bg-[#fefae051]'>
+<div className='w-11/12 mx-auto'>
+<div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,7 +37,7 @@ const Navbar = () => {
     <Link href={"/profile"}><Image src={user} alt="user icon"/></Link>
     <Link href={"/login"} className="btn ml-4 bg-[#2A381A] text-white font-medium">Login</Link>
   </div>
-</div>      
+</div>      </div>
   </div>
     );
 };
