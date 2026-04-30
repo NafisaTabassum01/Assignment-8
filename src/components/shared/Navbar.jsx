@@ -6,7 +6,7 @@ import user from "../../assets/user.png";
 
 const Navbar = () => {
     return (
-        <div className='shadow-sm px-4 bg-[#fefae051]'>
+        <div className='shadow-sm bg-[#fefae051]'>
 <div className='w-11/12 mx-auto'>
 <div className="navbar">
   <div className="navbar-start">
@@ -23,7 +23,7 @@ const Navbar = () => {
       </ul>
     </div>
 
-    <Link href={'/'} className="text-xl text-[#bc6c25] font-extrabold">QurbaniHat </Link>
+    <Link href={'/'} className="text-[24px] text-[#bc6c25] font-extrabold">QurbaniHat </Link>
 
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -35,7 +35,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
     <Link href={"/profile"}><Image src={user} alt="user icon"/></Link>
-    <Link href={"/login"} className="btn ml-4 bg-[#2A381A] text-white font-medium">Login</Link>
+    <Link href={"/login"} className="btn ml-4 bg-[#1b4332] text-white font-medium">Login</Link>
   </div>
 </div>      </div>
   </div>

@@ -22,8 +22,8 @@ const Footer = () => {
                     <i className=" fa-brands fa-x-twitter"></i>
                 </div>
             </div>
-            <hr className='border border-[#fefae02b] my-4'/>
-            <div className='flex flex-col md:flex-row justify-around gap-30 text-[16px]'>
+            <hr className='border border-[#fefae02b] mt-4 mb-4'/>
+            <div className='flex flex-col gap-20 md:flex-row justify-around text-[16px]'>
                 <p className='text-[#fefae066]'>© 2026 KeenKeeper. All rights reserved.</p>
                 <div className='text-[#fefae066] flex gap-8'>
                 <p>Privacy Policy</p>
