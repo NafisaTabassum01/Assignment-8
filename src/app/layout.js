@@ -1,3 +1,7 @@
+import dns from "node:dns";
+dns.setServers(['8.8.8.8','8.8.4.4']);
+
+
 import { Geist, Geist_Mono, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";

@@ -17,6 +17,11 @@ import goat2 from "../assets/goat-2.png";
 import goat3 from "../assets/goat-3.png";
 import goat4 from "../assets/goat-4.png";
 
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+
+
 const imageMap = {
   "cow.png": cow1,
   "cow-2.png": cow2,
@@ -42,6 +47,19 @@ export default function AnimalClient({ animals }) {
   } else if (sortingType === "high") {
     sortedAnimals.sort((a, b) => b.price - a.price);
   }
+
+  const { data: session } = authClient.useSession();
+const router = useRouter();
+
+const handleDetails = (id) => {
+  if (!session) {
+    toast.error("Please login first");
+    router.push(`/login?redirect=/animal/${id}`);
+    return;
+  }
+
+  router.push(`/animal/${id}`);
+};
 
   return (
     <div className="bg-[#fefae05a] py-10">
@@ -86,16 +104,19 @@ export default function AnimalClient({ animals }) {
                   {animal.location}
                 </p>
 
-                <Link
-                  href={`/animal/${animal.id}`}
-                  className="border border-[#AA6122] p-1.5 text-[#AA6122] rounded"
-                >
-                  Details
-                </Link>
+               <button
+                onClick={() => handleDetails(animal.id)}
+                className="border border-[#AA6122] p-1.5 text-[#AA6122] rounded">
+                Details
+                </button>
+
               </div>
             </div>
           ))}
         </div>
+            <hr className='mt-10 w-10/12 mx-auto border border-[#bdb1a58e]'/>
+      <p className='text-[14px] text-[#894E1B] text-center pt-2'><i className="fa-solid fa-circle-exclamation"></i><span className='font-bold'>  Note</span>: You must be logged in to see details and confirm booking.</p>
+      
       </div>
     </div>
   );

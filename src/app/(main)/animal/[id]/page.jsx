@@ -89,8 +89,7 @@ export default async function Page({ params }) {
       <div className="w-10/12 mx-auto flex flex-col gap-16 items-center shadow-lg rounded-2xl md:flex-row justify-center bg-[#fffef9b5] pt-12 mt-12">
     <Form></Form>   
       </div>
-      <hr className='mt-10 w-10/12 mx-auto border border-[#bdb1a58e]'/>
-      <p className='text-[14px] text-[#894E1B] text-center pt-2'><i className="fa-solid fa-circle-exclamation"></i><span className='font-bold'>  Note</span>: You must be logged in to confirm booking.</p>
+
     </div>
   );
 }

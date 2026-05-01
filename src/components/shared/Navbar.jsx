@@ -45,24 +45,44 @@ console.log(user, "user")
   </div>
   <div className="navbar-end">
 
-{isPending ? <span className="loading loading-spinner loading-xs"></span> : 
 
-user ? (<div className='flex item center gap-2'>
-  <h2 className='pt-2 pr-1 font-semibold text-green-800'>{user.name}</h2>
-  <Link href={"/profile"}>
-  <Image 
-    src={user?.image || user2} 
-    alt="user icon"
-    width={40}
-    height={40}
-    className="rounded-full"
-  />
-</Link>   
-  <Link href={"/login"} className="btn ml-4 bg-[#1b4332] text-white font-medium" onClick={async()=>await authClient.signOut()}>Logout</Link>
-</div>) : 
-( 
-  <Link href={"/login"} className="btn ml-4 bg-[#1b4332] text-white font-medium">Login</Link>
+{isPending ? (
+  <span className="loading loading-spinner loading-xs"></span>
+) : user ? (
+  <div className="flex items-center gap-2 justify-end">
+
+    <h2 className="hidden sm:block font-semibold text-green-800">
+      {user.name}
+    </h2>
+
+    <Link href={"/profile"}>
+      <Image
+        src={user?.image || user2}
+        alt="user icon"
+        width={40}
+        height={40}
+        className="rounded-full"
+      />
+    </Link>
+
+    <Link
+      href={"/login"}
+      onClick={async () => await authClient.signOut()}
+      className="btn btn-sm bg-[#1b4332] text-white font-medium ml-auto sm:ml-2"
+    >
+      Logout
+    </Link>
+
+  </div>
+) : (
+  <Link
+    href={"/login"}
+    className="btn btn-sm bg-[#1b4332] text-white font-medium ml-auto"
+  >
+    Login
+  </Link>
 )}
+
 
 </div>
 </div>   
