@@ -106,7 +106,7 @@ const handleDetails = (id) => {
 
                <button
                 onClick={() => handleDetails(animal.id)}
-                className="border border-[#AA6122] p-1.5 text-[#AA6122] rounded">
+                className="border border-[#AA6122] p-1.5 text-[#AA6122] rounded cursor-pointer">
                 Details
                 </button>
 
