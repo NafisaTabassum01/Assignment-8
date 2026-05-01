@@ -78,7 +78,7 @@ const UpdateProfilePage = () => {
 
         <form onSubmit={handleUpdate} className="px-6 pb-6 flex flex-col">
 
-          <label>Name</label>
+          <label className="pt-4 text-[#894E1B] text-[17px] font-semibold">Name</label>
           <input
             name="name"
             type="text"
@@ -86,7 +86,7 @@ const UpdateProfilePage = () => {
             className="input w-full"
           />
 
-          <label className="mt-3">Photo URL</label>
+          <label className="mt-4 text-[#894E1B] text-[17px] font-semibold">Photo URL</label>
           <input
             name="photo"
             type="text"
@@ -94,7 +94,7 @@ const UpdateProfilePage = () => {
             className="input w-full"
           />
 
-          <button disabled={loading} className="btn w-full mt-6">
+          <button disabled={loading} className="w-full mt-6 bg-[#dda15e] text-[#894E1B] text-[17px] cursor-pointer">
             {loading ? "Updating..." : "Update"}
           </button>
 
