@@ -5,6 +5,7 @@ import React from 'react';
 import Image from "next/image";
 import user2 from "../../assets/user.png";
 import { authClient } from '@/lib/auth-client';
+import Navlink from './Navlink';
 
 
 const Navbar = () => {
@@ -39,8 +40,8 @@ console.log(user, "user")
   <div className="navbar-center hidden lg:flex">
     <ul className="menu-horizontal px-1 gap-8">
       
-      <li className='text-[18px] font-bold text-[#606C38]'><Link href={'/'} className='hover:bg-amber-100 p-2'>Home</Link></li>
-      <li className='text-[18px] font-bold text-[#606C38]'><Link href={'/allAnimal'}className='hover:bg-amber-100 p-2'>All Animal</Link></li>
+      <li className='text-[18px] font-bold text-[#606C38]'><Navlink href={'/'} className='hover:bg-amber-100 p-2'>Home</Navlink></li>
+      <li className='text-[18px] font-bold text-[#606C38]'><Navlink href={'/allAnimal'}className='hover:bg-amber-100 p-2'>All Animal</Navlink></li>
     </ul>
   </div>
   <div className="navbar-end">
