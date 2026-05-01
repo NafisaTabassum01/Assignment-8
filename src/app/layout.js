@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono, Noto_Serif } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +41,9 @@ export default function RootLayout({ children }) {
 
       <body className={`${notoSerif.className} min-h-full flex flex-col`}>
         {children}
+        
+        <ToastContainer position="top-center" autoClose={2000} />
+
       </body>
     </html>
   );

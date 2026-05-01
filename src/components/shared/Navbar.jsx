@@ -1,13 +1,23 @@
+"use client";
+
 import Link from 'next/link';
 import React from 'react';
 import Image from "next/image";
-import user from "../../assets/user.png";
+import user2 from "../../assets/user.png";
+import { authClient } from '@/lib/auth-client';
 
 
 const Navbar = () => {
-    return (
+
+const { data: session,isPending } = authClient.useSession();
+const user = session?.user;
+
+console.log(user, "user")
+
+  return (
+
         <div className='shadow-sm bg-[#fefae051]'>
-<div className='w-11/12 mx-auto'>
+<div className='w-full md:w-11/12 mx-auto'>
 <div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
@@ -23,7 +33,7 @@ const Navbar = () => {
       </ul>
     </div>
 
-    <Link href={'/'} className="text-[24px] text-[#bc6c25] font-extrabold">QurbaniHat </Link>
+    <Link href={'/'} className="text-[20px] md:text-[24px] text-[#bc6c25] font-extrabold">QurbaniHat </Link>
 
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -34,10 +44,29 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link href={"/profile"}><Image src={user} alt="user icon"/></Link>
-    <Link href={"/login"} className="btn ml-4 bg-[#1b4332] text-white font-medium">Login</Link>
-  </div>
-</div>      </div>
+
+{isPending ? <span className="loading loading-spinner loading-xs"></span> : 
+
+user ? (<div className='flex item center gap-2'>
+  <h2 className='pt-2 pr-1 font-semibold text-green-800'>{user.name}</h2>
+  <Link href={"/profile"}>
+  <Image 
+    src={user?.image || user2} 
+    alt="user icon"
+    width={40}
+    height={40}
+    className="rounded-full"
+  />
+</Link>   
+  <Link href={"/login"} className="btn ml-4 bg-[#1b4332] text-white font-medium" onClick={async()=>await authClient.signOut()}>Logout</Link>
+</div>) : 
+( 
+  <Link href={"/login"} className="btn ml-4 bg-[#1b4332] text-white font-medium">Login</Link>
+)}
+
+</div>
+</div>   
+   </div>
   </div>
     );
 };

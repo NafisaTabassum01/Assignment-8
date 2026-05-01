@@ -2,9 +2,11 @@
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form'
+import { useRouter } from 'next/navigation';;
 
 const RegisterPage = () => {
+const router = useRouter();
 
   const {register,handleSubmit,formState: { errors }} = useForm()
 
@@ -22,17 +24,16 @@ const {data:res,error} =await authClient.signUp.email({
     callbackURL: "/login",
 
 });
+if(res){
+    alert("Signup Successful");
+    router.push("/login");
+}
 console.log(res,error);
 if(error){
     alert(error.message)
 }
 
-if(res){
-    alert("Signup Succesful");
 }
-
-}
-
 
     return (
         <div className='container mx-auto flex justify-center items-center min-h-[80vh] '>

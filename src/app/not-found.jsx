@@ -16,7 +16,7 @@ const NotFound = () => {
       </h2>
 
       <p className="mt-2 text-[#606C38]">
-        Sorry, the page you are looking for doesnt exist.
+        Sorry, the page you are looking for dosen't exist.
       </p>
 
       <Link href="/" className="btn text-white mt-6 bg-[#606C38]">

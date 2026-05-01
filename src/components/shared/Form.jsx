@@ -1,7 +1,6 @@
 "use client";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 export default function BookingForm({ animal }) {
 
@@ -48,7 +47,7 @@ export default function BookingForm({ animal }) {
         </div>
       </form>
 
-      <ToastContainer position="top-center" autoClose={2000} />
+      {/* <ToastContainer position="top-center" autoClose={2000} /> */}
     </>
   );
 }
