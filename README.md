@@ -2,7 +2,12 @@
 
 A modern livestock marketplace built for exploring and booking animals for Qurbani. Users can browse animals, view details, and book after authentication.
 
-## 🎯 Project Purpose
+
+## 🌐 Live Demo
+👉 https://assignment-8-gilt-two.vercel.app/
+
+
+### 🎯 Project Purpose
 
 The purpose of **QurbaniHat** is to provide a simple and convenient way for users to find and book Qurbani animals (such as cows and goats) without any hassle.  
 
@@ -14,7 +19,7 @@ Instead of going to physical markets, users can:
 This saves time, reduces stress, and makes the Qurbani buying experience more efficient and modern.
 
 
-### ✨ Key Features
+#### ✨ Key Features
 
 - 🔐 User Authentication (Login / Register / Google Login)
 - 🐮 Browse animals with detailed information
@@ -31,9 +36,10 @@ This saves time, reduces stress, and makes the Qurbani buying experience more ef
 - 🎨 Clean and modern UI design
 
 
-#### 🧰 NPM Packages Used
+##### 🧰 NPM Packages Used
 
 - `next` – React framework
+- `animate.css` – For animation
 - `react` – UI library
 - `react-dom`
 - `react-hook-form` – Form handling
@@ -42,4 +48,3 @@ This saves time, reduces stress, and makes the Qurbani buying experience more ef
 - `tailwindcss` – Styling framework
 - `daisyui` – UI components
 - `font-awesome` – Icons
-
