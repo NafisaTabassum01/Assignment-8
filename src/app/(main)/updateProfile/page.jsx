@@ -94,7 +94,7 @@ const UpdateProfilePage = () => {
             className="input w-full"
           />
 
-          <button disabled={loading} className="w-full mt-6 bg-[#dda15e] text-[#894E1B] text-[17px] cursor-pointer">
+          <button disabled={loading} className="w-full mt-6 py-1 bg-[#dda15e] text-[#894E1B] text-[17px] cursor-pointer">
             {loading ? "Updating..." : "Update"}
           </button>
 
