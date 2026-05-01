@@ -25,6 +25,7 @@ const {data:res,error} =await authClient.signUp.email({
 
 });
 if(res){
+    await authClient.signOut();
     alert("Signup Successful");
     router.push("/login");
 }
