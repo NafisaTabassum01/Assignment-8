@@ -3,6 +3,8 @@ import React from 'react';
 import banner from '../../assets/bannerCow (2).png';
 import Link from 'next/link';
 import arrow from '../../assets/arrow.png';
+import 'animate.css';
+
 
 const Banner = () => {
     return (
@@ -12,7 +14,7 @@ const Banner = () => {
                  <div className='p-5 pt-8'><p className='text-[54px] text-[#93541D] font-extrabold'>Find Your Perfect <br /> Qurbani Animal</p>
              <p className='text-[17px] text-[#455a2ecf] font-semibold pt-5'>Healthy Animal,Trusted Farm,Easy Booking.</p> <p></p> <br />
 
-             <Link href={"/allAnimal"}> <button className='btn bg-[#374A21] text-white font-medium'>Browse All Animals<Image src={arrow} alt=''/></button></Link>
+             <Link href={"/allAnimal"}> <button className='btn bg-[#374A21] text-white font-medium animate__animated animate__bounce'>Browse All Animals<Image src={arrow} alt=''/></button></Link>
              
              </div>
             <div><Image src={banner} alt='' className='w-100 h-80'/></div>
